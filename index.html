@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love 💕</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    
+    <!-- Floating Hearts Background -->
+    <div class="floating-hearts"></div>
+    
+    <!-- Password Screen -->
+    <div class="password-screen" id="passwordScreen">
+        <div class="password-container">
+            <h2>💕 Enter the Secret Word 💕</h2>
+            <p style="color: #666; margin-bottom: 20px;">The word that makes my heart skip a beat...</p>
+            <input type="password" id="passwordInput" placeholder="Our special word ✨" maxlength="20">
+            <br>
+            <button onclick="checkPassword()">💖 Enter Our World 💖</button>
+            <p style="font-size: 0.9rem; color: #888; margin-top: 15px; font-style: italic;">
+                Hint: It's what I call you when you're being extra adorable 🥰
+            </p>
+        </div>
+    </div>
+    
+    <!-- Curtains -->
+    <div class="curtain curtain-left" id="curtainLeft"></div>
+    <div class="curtain curtain-right" id="curtainRight"></div>
+    
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <!-- Navigation -->
+        <nav id="navbar">
+            <ul>
+                <li><a href="#" onclick="showPage('home')">🏠 Home</a></li>
+                <li><a href="#" onclick="showPage('story')">📖 Our Story</a></li>
+                <li><a href="#" onclick="showPage('gallery')">📸 Gallery</a></li>
+                <li><a href="#" onclick="showPage('letters')">💌 Letters</a></li>
+                <li><a href="#" onclick="showPage('video')">🎂 Birthday Video</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Home Page -->
+        <div id="home" class="page-content active">
+            <div class="header">
+                <div class="typewriter" id="typewriter"></div>
+            </div>
+            
+            <div class="love-dashboard">
+                <div class="love-card" onclick="showPage('story')">
+                    <i class="fas fa-book-heart"></i>
+                    <h3>Our Story</h3>
+                    <p>The beautiful journey of how we found each other and created magic together ✨</p>
+                </div>
+                
+                <div class="love-card" onclick="showPage('gallery')">
+                    <i class="fas fa-images"></i>
+                    <h3>Gallery</h3>
+                    <p>Our favorite moments captured in time - every smile, every laugh, every precious memory 📷</p>
+                </div>
+                
+                <div class="love-card" onclick="showPage('letters')">
+                    <i class="fas fa-envelope-heart"></i>
+                    <h3>Love Letters</h3>
+                    <p>Words from my heart to yours - all the things I want you to know 💕</p>
+                </div>
+                
+                <div class="love-card" onclick="showPage('video')">
+                    <i class="fas fa-birthday-cake"></i>
+                    <h3>Birthday Surprise</h3>
+                    <p>A special video message just for you on your special day 🎉</p>
+                </div>
+                
+                <div class="love-card" id="reasonsCard">
+                    <i class="fas fa-heart"></i>
+                    <h3>Why I Love You</h3>
+                    <p>Click to discover all the reasons you make my world brighter ☀️</p>
+                </div>
+            </div>
+            
+            <div class="quotes-section">
+                <div class="quote-container">
+                    <div class="quote active">"In all the world, there is no heart for me like yours." — Maya Angelou</div>
+                    <div class="quote">"You're my favorite notification." 📱💕</div>
+                    <div class="quote">"I love you more than yesterday, but less than tomorrow." 💫</div>
+                    <div class="quote">"You are my today and all of my tomorrows." 🌅</div>
+                    <div class="quote">"Every love story is beautiful, but ours is my favorite." 📚💖</div>
+                </div>
+            </div>
+            
+            <div class="love-reasons" id="loveReasons" style="display: none;">
+                <h2>💖 Why I Love You 💖</h2>
+                <div class="reason-display">
+                    <div class="reason-text" id="reasonText">Click the button below to see why you're amazing!</div>
+                </div>
+                <button class="next-reason-btn" onclick="showNextReason()">Show Me Another Reason 💕</button>
+                <button class="next-reason-btn" onclick="hideLoveReasons()" style="background: #6c757d; margin-left: 10px;">Back to Home 🏠</button>
+            </div>
+            
+            <div class="begin-story">
+                <a href="#" class="story-button" onclick="showPage('story')">
+                    ✨ Click to Begin Our Story ✨
+                </a>
+            </div>
+        </div>
+        
+        <!-- Our Story Page -->
+        <div id="story" class="page-content">
+            <h1>📖 Our Beautiful Story 📖</h1>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>💫 Fist time I saw you</h3>
+                        <p>It was in that math class where you scored a perfect 30/30, and I couldn't help but be captivated by your brilliance. Your intelligence sparked a curiosity in my heart that soon blossomed into something beautiful. You weren't just solving equations that day - you were solving the mystery of my heart.</p>
+                        <small style="color: #888;">The beginning of forever ✨</small>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>💕 First time we talked</h3>
+                        <p>December 16th, 2022 - the day my heart found its voice. At that hackathon, when I was dared to name my crushes, my heart took over and whispered your name. What seemed like a slip of the tongue was actually my heart's way of telling the world about you. That moment, though unexpected, was the beginning of our beautiful journey together.</p>
+                        <small style="color: #888;">When time stood still ⏰</small>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>🌙 Midnight Conversations</h3>
+                        <p>Those late-night talks that lasted until sunrise, sharing dreams, fears, and everything in between. You became my safe place.</p>
+                        <small style="color: #888;">Heart to heart connections 💭</small>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>🏠 Building Our World</h3>
+                        <p>Creating traditions, inside jokes, and a love that grows stronger every day. You're not just my girlfriend, you're my home.</p>
+                        <small style="color: #888;">Today and always 💖</small>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>💕 Our First Date</h3>
+                        <p>After that group discussion, we found ourselves in a cozy coffee shop, where time seemed to stand still. With every word we shared, I fell deeper into your world. The warmth of our conversation matched the coffee in our cups, but my heart held back its deepest feelings, wrapped in the gentle fear of responsibility. Little did I know, that coffee shop would become the first chapter of our love story.</p>
+                        <small style="color: #888;">When time stood still ⏰</small>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>🌧️ The Storm Before The Rainbow</h3>
+                        <p>Life tested our connection with misunderstandings and silence. Six months of distance felt like an eternity, each day a reminder of what we had lost. But sometimes, the heart needs time to understand what it truly wants. Those months of separation taught us the value of what we had, making our reunion even sweeter.</p>
+                        <small style="color: #888;">The lesson that strengthened our bond 💫</small>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>💍 The Beginning of Forever</h3>
+                        <p>August 17th, 2024 - the day that changed everything. After all the ups and downs, I knew you were the one I wanted to spend my life with. The moment I asked you to be mine, and you said yes, was the moment my world became complete. Your acceptance wasn't just a yes to a question - it was a yes to our future, to our dreams, to our forever. And your beautiful three-page letter, filled with your heart's deepest feelings, became my most treasured possession, a testament to the depth of our love.</p>
+                        <small style="color: #888;">When two hearts became one 💖</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Gallery Page -->
+        <div id="gallery" class="page-content">
+            <h1>📸 Our Memory Lane 📸</h1>
+            <p style="text-align: center; color: #666; margin-bottom: 40px; font-size: 1.1rem;">
+                Every picture tells a story, and our story is my favorite 💕
+            </p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="./Video_photos/first_photo.jpg" alt="Our first photo together">
+                </div>
+                <div class="gallery-item">
+                    <img src="./Video_photos/second_photo.png" alt="Special moment">
+                </div>
+                <div class="gallery-item">
+                    <img src="./Video_photos/third_photo.jpg" alt="Beautiful memories">
+                </div>
+                <div class="gallery-item">
+                    <img src="./Video_photos/fourth_photo.jpg" alt="Together forever">
+                </div>
+                <div class="gallery-item">
+                    <img src="./Video_photos/fifth_photo.jpg" alt="Love captured">
+                </div>
+                <div class="gallery-item">
+                    <img src="./Video_photos/sixth_photo.jpg" alt="Special moments">
+                </div>
+                <div class="gallery-item">
+                    <img src="./Video_photos/seventh_photo.jpg" alt="Our journey">
+                </div>
+                <div class="gallery-item">
+                    <img src="./Video_photos/eigth_photo.jpg" alt="Beautiful memories">
+                </div>
+                <div class="gallery-item">
+                    <img src="./Video_photos/cute.png" alt="Cute moments">
+                </div>
+                <div class="gallery-item">
+                    <img src="./Video_photos/video_call.jpg" alt="Video call memories">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Letters Page -->
+        <div id="letters" class="page-content">
+            <h1>💌 Letters From My Heart 💌</h1>
+            <div class="letters-container">
+                <div class="letter">
+                    <h3>💝 The 3 Pages of letters that made me fall deeper 💝</h3>
+                    <p style="text-align: center; color: #666; margin-bottom: 20px;">The words that captured my heart forever...</p>
+                    <img src="./letters/her_letter_p1.jpg" alt="First page of her letter">
+                </div>
+                
+                <div class="letter">
+                    <img src="./letters/her_letter_p2.jpg" alt="Second page of her letter">
+                </div>
+                
+                <div class="letter">
+                    <img src="./letters/her_letter_p3.jpg" alt="Third page of her letter">
+                </div>
+
+                <div class="letter" style="text-align: center; margin: 40px 0 20px 0;">
+                    <h2 style="font-family: 'Dancing Script', cursive; color: #d63384; font-size: 2.5rem;">
+                        💌 My Letters to You 💌
+                    </h2>
+                    <p style="color: #666; font-style: italic;">Words from my heart to yours...</p>
+                </div>
+
+                <div class="letter">
+                    <img src="./letters/p1.jpg" alt="first">
+                </div>
+                
+                <div class="letter">
+                    <img src="./letters/p2.jpg" alt="first">
+                </div>
+                
+                <div class="letter">
+                    <img src="./letters/p3.jpeg" alt="first">
+                </div>
+                <div class="letter">
+                    <img src="./letters/p4_check.jpg" alt="first">
+                </div>
+                <div class="letter">
+                    <img src="./letters/p5.jpeg" alt="first">
+                </div>                <div class="letter">
+                    <img src="./letters/p6.jpeg" alt="first">
+                </div>                <div class="letter">
+                    <img src="./letters/p7.jpeg" alt="first">
+                </div>                <div class="letter">
+                    <img src="./letters/p8.jpeg" alt="first">
+                </div>                <div class="letter">
+                    <img src="./letters/p9.jpg" alt="first">
+                </div>                <div class="letter">
+                    <img src="./letters/p10.jpg" alt="first">
+                </div>                <div class="letter">
+                    <img src="./letters/p11.jpeg" alt="first">
+                </div>                <div class="letter">
+                    <img src="./letters/p12a.jpg" alt="first">
+                </div>                <div class="letter">
+                    <img src="./letters/p12b.jpg" alt="first">
+                </div>                <div class="letter">
+                    <img src="./letters/p13.jpg" alt="first">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Birthday Video Page -->
+        <div id="video" class="page-content">
+            <h1>🎂 Happy Birthday, Beautiful! 🎂</h1>
+            <div class="video-container">
+                <video controls class="birthday-video">
+                    <source src="./Video_photos/birthday.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <p style="font-family: 'Dancing Script', cursive; font-size: 1.5rem; color: #d63384;">
+                    Made with all my love, just for you 💕
+                </p>
+            </div>
+        </div>
+        
+        <!-- Music Toggle -->
+        <button class="music-toggle" id="musicToggle">
+            <i class="fas fa-play"></i>
+        </button>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="backgroundMusic" loop>
+        <source src="./Video_photos/background_music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
